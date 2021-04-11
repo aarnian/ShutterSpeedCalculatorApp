@@ -1,7 +1,8 @@
-package com.example.myapp;
+package com.example.shutterspeedcalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Bundle;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,14 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    // K voi olla esim 1-3, suurempi = enemmän motion blur
-    //int k = 1;
-    //Pixel pitch 1200D:ssä 4,29µm
-    //float p = (float) 4.29;
-
-
-
-    public void handleNums(View v){
+    public void handleNums(View v) {
 
         //Aperture
         EditText t = findViewById(R.id.source);
@@ -33,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         if (input.matches("")) {
             N = 0;
         } else {
-            N = new  Float(input);
+            N = new Float(input);
         }
         Log.d("info", input);
 
@@ -44,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         if (input2.matches("")) {
             f = 0;
         } else {
-            f = new  Float(input2);
+            f = new Float(input2);
         }
         Log.d("info", input2);
 
@@ -55,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         if (input3.matches("")) {
             d = 0;
         } else {
-            d = new  Float(input3);
+            d = new Float(input3);
         }
         Log.d("info", input3);
 
@@ -66,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         if (input4.matches("")) {
             k = 0;
         } else {
-            k = new  Float(input4);
+            k = new Float(input4);
         }
         Log.d("info", input4);
 
@@ -77,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         if (input5.matches("")) {
             p = 0;
         } else {
-            p = new  Float(input5);
+            p = new Float(input5);
         }
         Log.d("info", input5);
 
@@ -87,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(a);
 
         //Tulos
-        ((TextView)findViewById(R.id.output)).setText(rounded.toString() + " seconds");
+        ((TextView) findViewById(R.id.output)).setText(rounded.toString() + " seconds");
+
 
     }
 
@@ -106,7 +101,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
 }
-
